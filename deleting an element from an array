@@ -1,0 +1,50 @@
+Given an array with N=5 integer elements delete a given element from the array and print the elements of new array
+Example X= 1, -9,10,5,6
+I want to delete 5 
+Then my new array is
+X=1,-9,10,6
+
+#include "pch.h"
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	double array[5];
+	double num;
+     
+	cout << " \n Enter 5 numbers below: \n";
+
+	for (int i = 0; i < 5; i++)
+	{
+		cout << " ";
+		cin >> array[i];
+	}
+
+	cout << "\n\n Now tell me which element you want me to delete? \n";
+
+	cin >> num;
+
+	for (int j = 0; j < 5; j++)
+	{
+		if (array[j] == num)
+		{
+			for (int k = j; k < 5; k++)
+			{
+				array[k] = array[k + 1];  // assigning the next element in the next box
+	
+			}
+		}	
+	}
+
+	cout << " Printing the array without " << num<<"\n";
+
+	for(int i = 0;i < 4; i++)
+	{
+		cout <<"\t" <<array[i];
+	}
+
+	return 0;
+	
+}
+
