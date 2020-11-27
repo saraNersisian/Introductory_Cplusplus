@@ -1,0 +1,50 @@
+Heron formula for the area, A, of a triangle with sides of length a, b, and c is
+
+A=√([s(s-a)(s-b)(s-c)] )
+
+
+s=((a+b+c))/2
+Write, test, and execute a function that accepts the values of a, b, and c as parameters in main() as input, and then calculates the values of s and [s(s - a)(s - b)(s - c)] in a function. If this quantity is positive, the function calculates A. If the quantity is negative, a, b, and c do not form a triangle, and the function should set A = -1. The value of A should be returned by the function. Test the function by passing various data to it and verifying the returned value. 
+
+
+#include "pch.h"
+#include <iostream>
+#define _USE_MATH_DEFINES
+#include <math.h>
+
+using namespace std;
+
+double findArea(double a, double b, double c)
+{
+	double A;
+	double s = (a + b + c) / 2;
+
+	if (s > 0)
+		A = sqrt(s * (s - a) * (s - b) * (s - c));
+	else
+		A = -1;
+	return A;
+
+}
+
+int main()
+{
+	double a, b, c;
+	double Area;
+
+	cout << "\n Enter 'a' :";
+	cin >> a;
+	cout << "\n Enter 'b' :";
+	cin >> b;
+	cout << "\n Enter 'c' :";
+	cin >> c;
+
+	Area = findArea(a, b, c);
+
+	if (Area > 0)
+		cout << "\n The area of the triangle is " << Area << endl;
+	else
+		cout << " \nThese numbers cannot make a triangle!" << endl;
+
+	return 0;
+}
