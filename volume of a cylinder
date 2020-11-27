@@ -1,0 +1,38 @@
+The volume, V, of a cylinder is given by the formula V = π r2 L 
+where r is the cylinder’s radius and L is its length. Using this formula, write a C++ function named cylvol() that accepts a cylinder’s radius and length and returns its volume.
+b. Include the function written in Exercise 5a in a working program. Make sure your function 
+is called from main () and returns a value to main () correctly. Have main () use a cout statement to display the returned value. Test the function by passing various data to it and verifying the returned value. 
+
+
+#include "pch.h"
+#include <iostream>
+#define _USE_MATH_DEFINES
+#include <math.h>
+
+using namespace std;
+
+double cylvol(double r, double L)
+{
+	double vol;
+	vol = M_PI * r * r * L;
+
+	return vol;
+}
+
+int main()
+{
+	double volume;
+	double r, L;
+
+	cout << " \n Enter the Radius: ";
+	cin >> r;
+	cout << "\n Enter the Length: ";
+	cin >> L;
+
+	volume = cylvol(r, L);
+
+	cout << "\n The volume of the cylinder is " << volume<<endl;
+
+	return 0;
+
+}
