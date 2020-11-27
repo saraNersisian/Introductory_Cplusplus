@@ -1,0 +1,39 @@
+a. Write a function named totamt() that uses four parameters named quarters, dimes, nickels, and pennies, which represent the number of each of these coins in a piggy-bank. The function should determine the dollar value of the number of quarters, dimes, nickels, and pennies passed to it and return the calculated value. 
+b. Include the function written in Exercise 2a in a working program. Make sure your function is called from main() and returns a value to main() correctly. Have main() use a cout statement to display the returned value. Test the function by passing various data to it and verifying the returned value. 
+#include "pch.h"
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+double totamt(int p, int n, int d, int q)
+{
+	double totalAmount;
+	cout << setprecision(2) << fixed;
+	totalAmount = (p*0.01) + (n*0.05) + (d*0.10) + (q*0.25);
+	return totalAmount;
+
+}
+
+
+int main()
+{
+	int pennies, nickles, dimes, quarters;
+	double dollar;
+
+	cout << "\n Enter the quantity of each coin";
+	cout << "\n\n  Number of Pennies: ";
+	cin >> pennies;
+	cout << "  Number of Nickels: ";
+	cin >> nickles;
+	cout << "  Number of Dimes: ";
+	cin >> dimes;
+	cout << "  Number of Quarters: ";
+	cin >> quarters;
+
+	dollar = totamt(pennies, nickles, dimes, quarters);
+
+	
+	cout << "\n The dollar value of your piggy-bank is $" << dollar <<"\n"<< endl;
+	return 0;
+
+}
