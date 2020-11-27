@@ -1,0 +1,25 @@
+Read N One Dimensional Array Elements and calculate the Sum and Product of all elements and print the sum and product. N=20
+
+#include "pch.h"
+#include <iostream>
+using namespace std;
+
+
+int main()
+{
+	int array[20];
+	int sum = 0;
+
+	cout << " Enter 20 integers below:\n\n";
+
+	for (int i = 0; i < 20; i++)
+	{
+		cout << " ";
+		cin >> array[i];
+		sum += array[i];
+	}
+
+	cout << "\n\n-------> The sum of this array is: " << sum;
+
+	return 0;
+}
