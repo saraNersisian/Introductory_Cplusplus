@@ -1,0 +1,32 @@
+Problem 1) Write, compile, and run a C++ program that accepts a user-entered number and calculates the square root and the reciprocal. Before calculating the square root, validate that the number isn’t negative, and before calculating the reciprocal, check that the number isn’t zero. If either condition occurs, display a message stating that the operation can’t be calculated. 
+
+
+#include "pch.h"
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	double num;
+	double SquareRoot;
+	double  reciprocal;
+
+	cout << "\n Please enter a positive integer and non-zero number: ";
+	cin >> num;
+
+	while (num < 1)
+	{
+		cout << "******* WRONG INPUT! ******* \n Please try again and enter a valid number: ";
+		cin >> num;
+	}
+
+	SquareRoot = sqrt(num);
+	reciprocal = num / (-1);
+
+
+	cout << "\n\n -The square root of your number is: " << SquareRoot << endl;
+	cout << "\n -The reciprocal of your number is: " << reciprocal << endl;
+
+	return 0;
+
+}
