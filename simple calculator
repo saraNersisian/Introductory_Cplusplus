@@ -1,0 +1,58 @@
+Prob 2) Simple calculator
+
+1.	Input two numbers and a character from user in the given format. Store them in some variable say num1, op and num2.
+2.	Switch the value of op i.e. switch(op).
+3.	There are four possible values of op i.e. '+', '-', '*' and '/'.
+4.	For case '+' perform addition and store result in some variable i.e. result = num1 + num2.
+5.	Similarly, for case '-' perform subtraction and store result in some variable i.e. result = num1 - num2.
+6.	Repeat the process for multiplication and division.
+7.	Finally output the value of result.
+
+
+#include "pch.h"
+#include <iostream>
+
+
+using namespace std;
+
+int main()
+{
+	double num1, num2;
+	char op;
+	double result;
+
+	cout << " \n Enter two numbers:\n ";
+	cin >> num1 >> num2;
+
+	cout << " Now enter an operation ( + , - , * , / ) : ";
+	cin >> op;
+
+
+
+	switch (op)
+	{
+	case '+' : 
+		result = num1 + num2;
+		break; 
+	case '-' :
+		result = num1 - num2;
+		break;
+	case '*' :
+		result = num1 * num2;
+		break;
+	case '/' :
+		while (num2 == 0)
+		{
+			cout << " \n Invalid Input! (DIVISION TO ZERO!) \n \nPlease enter another number: ";
+				cin >> num2;
+		}
+		result = num1 / num2;
+		break;
+
+	}
+
+	cout << " \n The result is: " << result<< endl;
+	return 0;
+
+
+}
