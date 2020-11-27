@@ -1,0 +1,27 @@
+1)	C/C++ program that will read N integer array elements and reverse them and will print reversed array elements. Make N=11 
+
+#include "pch.h"
+#include <iostream>
+using namespace std;
+
+int main()
+{
+
+	int array[11];
+
+	cout << " \n Enter 11 numbers below: " << "\n";
+
+	for (int i = 0; i <= 10; i++)
+	{
+		cout << " ";
+		cin >> array[i];
+	}
+
+	cout << "\n\n--------> The Reversed array is:\n";
+	for (int i = 10; i >= 0; i--)
+	{
+		cout << " "<<array[i]<<"\n";
+
+	}
+	return 0;
+}
