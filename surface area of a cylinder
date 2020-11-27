@@ -1,0 +1,38 @@
+The surface area, S, of a cylinder is given by the formula S = 2 π rl 
+where r is the cylinder’s radius, and l is the length of the cylinder. Using this formula, write a C++ function named surfarea() that accepts a cylinder’s radius and length and returns its surface area. 
+b. Include the function written in Exercise 6a in a working program. Make sure your function is called from main () and returns a value to main () correctly. Have main () use a cout statement to display the returned value. Test the function by passing various data to it and verifying the returned value. 
+
+
+
+#include "pch.h"
+#include <iostream>
+#define _USE_MATH_DEFINES
+#include <math.h>
+
+using namespace std;
+
+double surfarea(double r, double L)
+{
+	double SA;
+	SA = 2 * M_PI * r * L;
+
+	return SA;
+}
+
+int main()
+{
+	double SurfaceArea;
+	double r, L;
+
+	cout << " \n Enter the Radius: ";
+	cin >> r;
+	cout << "\n Enter the Length: ";
+	cin >> L;
+
+	SurfaceArea = surfarea(r, L);
+
+	cout << "\n The volume of the cylinder is " <<SurfaceArea << endl;
+
+	return 0;
+
+}
